@@ -4,7 +4,7 @@
 variable "module" {
   description = "Modulname: wird als Hostname und zum Bestimmen der IP-Adresse verwendet"
   type        = string
-  default     = "base-10-default"
+  default     = "base-10"
 }
 
 variable "description" {
@@ -72,12 +72,6 @@ variable "target_node" {
 # Template, muss vorher erstellt werden.
 variable "template_name" {
   default = "ubuntu-2204-cloudinit-template"
-}
-
-variable "ipconfig" {
-  description = "Netzwerk Teil"
-  type        = string
-  default     = "ip=192.168.1.10/24,gw=192.168.1.1"
 }
 
 variable "vpn" {
