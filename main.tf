@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "vm" {
   scsihw   = "virtio-scsi-pci"
   bootdisk = "scsi0"
 
-  ipconfig0 = format("ip=192.168.1.%s/24,gw=192.168.1.1", regex("[0-9]+", var.module))
+  ipconfig0 = format("ip=192.168.1.1%s/24,gw=192.168.1.1", regex("[0-9]+", var.module))
 
   cicustom = "user=local:snippets/${var.userdata}"
 }
