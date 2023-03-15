@@ -5,6 +5,7 @@
 resource "proxmox_vm_qemu" "vm" {
   name        = var.module
   target_node = var.target_node
+  vmid        = regex("[0-9]+", var.module) + 1000  
 
   ### Clone VM operation
   clone = var.template_name
