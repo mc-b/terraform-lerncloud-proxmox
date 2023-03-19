@@ -61,15 +61,16 @@ Im Verzeichnis `examples` befindet sich eine funktionsfähige Terraform Konfigur
 
     git clone https://github.com/mc-b/terraform-lerncloud-proxmox
     cd terraform-lerncloud-proxmox/examples
+    cp cloud-init /var/lib/vz/snippets
     terraform init
 
 Ändern der Target-Node
 
-    sed -i 's/pve-01/pve-02/g' $(find . -name "variables.tf")
+    sed -i 's/pve-01/pve/g' $(find . -name "variables.tf")
     
 Ändern des URLs für den Zugriff auf Proxmox
 
-    sed -i 's/192.168.1.196/<mein DNS oder IP>/g' $(find . -name "variables.tf")        
+    sed -i 's/192.168.1.196/localhost/g' $(find . -name "variables.tf")        
 
 Weitere Einstellungen, siehe Datei `variables.tf`.
 
