@@ -48,7 +48,7 @@ variable "userdata" {
 variable "url" {
   description = "URL fuer den Zugriff auf das API des Proxmox Servers"
   type        = string
-  default     = "https://192.168.1.196:8006/api2/json"
+  default     = "https://localhost:8006/api2/json"
 }
 
 variable "user" {
@@ -66,7 +66,7 @@ variable "key" {
 
 # auf welcher Node wird die VM erstellt
 variable "target_node" {
-  default = "pve-01"
+  default = "pve"
 }
 
 # Template, muss vorher erstellt werden.
