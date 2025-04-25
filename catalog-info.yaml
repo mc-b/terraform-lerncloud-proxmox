@@ -7,7 +7,8 @@ metadata:
   tags:
   - terraform
   - lerncloud
-  - opentofu    
+  - opentofu   
+  - promox 
   links:
   - url: https://github.com/mc-b/terraform-lerncloud-proxmox
     title: Repository
@@ -18,7 +19,7 @@ metadata:
     # backstage.io/techdocs-ref: url:https://github.com/mc-b/terraform-lerncloud-proxmox
 spec:
   type: other
-  lifecycle: production
+  lifecycle: experimental
   owner: group:mc-b/mc-b
-  dependsOn:
-    - component:mc-b/lerncloud     
+  subcomponentOf: component:mc-b/terraform-provider-lerncloud
+   
